@@ -10,7 +10,8 @@ struct Motorcycle {
 
 int main() {
     const std::vector<Motorcycle> motorcycles{
-        {"HarleyDavidson", "черный", "HD123", "А123АА", 2020, 2025, 1500000}
+        {"HarleyDavidson", "синий", "HD-FAKE-104", "TEST-001", 2022, 2025, 1850000},
+        {"Roadster", "серый", "RD-FAKE-208", "TEST-002", 2021, 2024, 920000}
     };
     std::cout << "\n=============================================\n"
               << "Мотоциклы марки HarleyDavidson:\n"

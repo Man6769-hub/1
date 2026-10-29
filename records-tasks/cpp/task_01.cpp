@@ -2,26 +2,27 @@
 #include <string>
 #include <vector>
 
-struct BasketballPlayer {
+struct FootballPlayer {
     std::string surname, firstName, patronymic, sex, nationality, birthDate, phone, team, role;
-    int height, weight, teamNumber, points, games;
+    int height, weight, teamNumber, goals, games;
 };
 
 int main() {
-    const std::vector<BasketballPlayer> players{
-        {"Сидоров", "Петр", "Алексеевич", "мужской", "русский", "1999-02-10", "+70000000001", "Спартак", "защитник", 198, 90, 7, 180, 20}
+    const std::vector<FootballPlayer> players{
+        {"Орлов", "Артем", "Сергеевич", "мужской", "русский", "2001-03-14", "+7-000-000-00-01", "Сокол", "полузащитник", 181, 76, 8, 9, 72},
+        {"Фомин", "Егор", "Денисович", "мужской", "русский", "2002-11-06", "+7-000-000-00-02", "Вымпел", "защитник", 188, 82, 4, 2, 38}
     };
     std::cout << "\n=============================================\n"
-              << "Баскетболисты, набравшие больше 150 очков:\n"
+              << "Футболисты, сыгравшие больше 50 матчей:\n"
               << "=============================================\n";
     for (const auto& player : players) {
-        if (player.points > 150) {
+        if (player.games > 50) {
             std::cout << "ФИО: " << player.surname << " " << player.firstName << " " << player.patronymic << '\n'
                       << "Пол: " << player.sex << '\n' << "Национальность: " << player.nationality << '\n'
                       << "Рост: " << player.height << '\n' << "Вес: " << player.weight << '\n'
                       << "Дата рождения: " << player.birthDate << '\n' << "Телефон: " << player.phone << '\n'
                       << "Команда: " << player.team << '\n' << "Номер: " << player.teamNumber << '\n'
-                      << "Амплуа: " << player.role << '\n' << "Очки: " << player.points << '\n'
+                      << "Амплуа: " << player.role << '\n' << "Голы: " << player.goals << '\n'
                       << "Игры: " << player.games << '\n'
                       << "---------------------------------------------\n";
         }
